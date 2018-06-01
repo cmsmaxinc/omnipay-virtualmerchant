@@ -18,7 +18,7 @@ class Response extends AbstractResponse
         $this->raw = (string) $data;
 
         $this->data = array();
-        if ($data && count($data)) {
+        if ($data) {
             foreach (explode("\n", $data) as $i) {
                 list ($k, $v) = explode("=", $i);
                 $this->data[$k] = $v;
