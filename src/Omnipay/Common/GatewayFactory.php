@@ -2,7 +2,7 @@
 
 namespace Omnipay\Common;
 
-use Guzzle\Http\ClientInterface;
+use Omnipay\Common\Http\ClientInterface;
 use Omnipay\Common\Exception\RuntimeException;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 

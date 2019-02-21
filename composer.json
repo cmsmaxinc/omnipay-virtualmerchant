@@ -24,7 +24,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Omnipay\\VirtualMerchant\\" : "src/" }
+        "psr-4": { "Omnipay\\" : "src/Omnipay/" }
     },
     "require": {
         "omnipay/common": "~3.0"

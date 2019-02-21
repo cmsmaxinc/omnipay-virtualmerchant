@@ -2,8 +2,8 @@
 
 namespace Omnipay\Common;
 
-use Guzzle\Http\ClientInterface;
-use Guzzle\Http\Client as HttpClient;
+use Omnipay\Common\Http\ClientInterface;
+use Omnipay\Common\Http\Client as HttpClient;
 use Symfony\Component\HttpFoundation\ParameterBag;
 use Symfony\Component\HttpFoundation\Request as HttpRequest;
 
@@ -18,7 +18,7 @@ abstract class AbstractGateway implements GatewayInterface
     protected $parameters;
 
     /**
-     * @var \Guzzle\Http\ClientInterface
+     * @var \Omnipay\Common\Http\ClientInterface
      */
     protected $httpClient;
 
@@ -33,7 +33,7 @@ abstract class AbstractGateway implements GatewayInterface
      * @param ClientInterface $httpClient  A Guzzle client to make API calls with
      * @param HttpRequest     $httpRequest A Symfony HTTP request object
      */
-    public function __construct(ClientInterface $httpClient = null, HttpRequest $httpRequest = null)
+    public function __construct($httpClient = null, HttpRequest $httpRequest = null)
     {
         $this->httpClient = $httpClient ?: $this->getDefaultHttpClient();
         $this->httpRequest = $httpRequest ?: $this->getDefaultHttpRequest();
