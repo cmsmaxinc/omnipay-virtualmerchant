@@ -26,6 +26,7 @@ class AuthorizeRequestTest extends TestCase
         $this->assertSame('ccauthonly', $data['ssl_transaction_type']);
     }
 
+    /** @doesNotPerformAssertions */
     public function testGetDataTestMode()
     {
         $this->request->setTestMode(true);
